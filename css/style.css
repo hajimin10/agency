@@ -29,7 +29,22 @@
     /* border: 1px solid #000; */
     padding: 1rem 2rem;
 }
-.btn-login {
+/* .btn-login {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--white50p);
+    border-radius: 50%;
+
+    /* 중앙정렬 */
+/* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+/* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+/* color: #fff;
+    font-size: 2rem;
+} */
+nav button[type="button"] {
     width: 4rem;
     height: 4rem;
     border: 1px solid var(--white50p);
@@ -43,6 +58,10 @@
     /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
     color: #fff;
     font-size: 2rem;
+}
+
+.btn-menu {
+    display: none !important;
 }
 
 .video {
@@ -78,6 +97,7 @@
     color: #fff;
 
     width: 113rem;
+    width: 59.3799%;
 }
 
 .video-title h2 {
@@ -126,10 +146,12 @@
 
 .about figure {
     margin-top: 4.3rem;
+    width: 880px;
+    width: 100%;
 }
 
 .about figure + p {
-    margin-top: 1.8rem;
+    margin-top: 2.8rem;
 }
 
 .team {
@@ -157,12 +179,15 @@
 
 .team-slider .swiper-slide {
     width: 28rem;
+    width: 23.7288%;
     min-height: 33rem;
     /* border: 1px solid #000; */
 }
 
 .team-slider .swiper-slide figure {
     width: 24rem;
+    width: 85.7143%; /* 24 나누기 28 곱하기 100 */
+
     aspect-ratio: 1/1; /* 가로세로 비율 */
     /* border: 1px solid #f00; */
     border-radius: 50%;
@@ -199,10 +224,13 @@
 
 .work-new {
     width: 48rem;
+    width: 40.678%;
 }
 
 .work-list {
     width: 68rem;
+    width: 57.6271%;
+
     display: flex;
     flex-wrap: wrap; /* 줄바꿈 */
     gap: 20px;
@@ -210,6 +238,8 @@
 
 .work-list li {
     width: 33rem;
+    width: 48.5294%;
+
     height: 24.2rem;
 }
 
@@ -225,6 +255,8 @@
 
 .form-wrap {
     width: 48.8rem;
+    width: 41.3559%;
+
     height: 5.4rem;
     border: 1px solid var(--main-color);
     border-radius: var(--rds);
@@ -299,4 +331,165 @@
 
     justify-content: center;
     align-items: center;
+}
+
+/* ineer의 크기에 따른 분기점 */
+/* 메모 1번 완료 */
+@media screen and (max-width: 1180px) {
+    .inner {
+        width: 90%; /* 임시 */
+    }
+}
+
+/* 태블릿 디자인 */
+@media screen and (max-width: 1024px) {
+    .inner {
+        /* 디자인 한 태블릿 이너 크기 그냥 적으면 됨 */
+        width: 96.4rem;
+        /* 모바일 크기 변경 */
+        width: 94.1406%;
+    }
+
+    .video {
+        aspect-ratio: 1/0.478515625;
+    }
+
+    .video-title {
+        width: 71.4rem;
+        width: 69.7266%;
+        background: red;
+    }
+
+    .video-title p {
+        padding: 0 5.7rem;
+    }
+
+    .about .inner {
+        padding: 0;
+    }
+
+    .work-wrap {
+        flex-direction: column; /* 메인축 세로로 */
+        gap: 4.8rem;
+    }
+
+    .work-new {
+        width: 100%;
+    }
+
+    .work-list {
+        width: 100%;
+
+        flex-wrap: nowrap; /* 줄바꿈 하지마라 */
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .work-list li {
+        width: 23rem;
+        width: 23.8589%;
+        height: initial; /* 세로 값의 초기값, 오토 initial, auto */
+    }
+
+    .form-wrap {
+        width: 48.8rem;
+        width: 50.6224%;
+    }
+
+    .map-wrap {
+        /* height: 84.6rem; */
+        height: initial;
+        aspect-ratio: 1/0.826171875;
+    }
+}
+
+/* 모바일 디자인 */
+/* 지앤비 메뉴에 아이콘 넣는거는 인덱스에서 버튼 추가하기 */
+@media screen and (max-width: 390px) {
+    .inner {
+        width: 89.7436%; /* 350/390*100 */
+    }
+
+    #header nav {
+        height: 6.8rem;
+    }
+
+    .logo a {
+        display: block;
+        width: 3rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .btn-menu {
+        display: flex !important;
+        margin-left: auto; /* 언급한 반대방향으로 미는 명령 */
+        margin-right: 1.2rem;
+    }
+
+    .video {
+        aspect-ratio: 1/1.3846;
+    }
+
+    .video-title {
+        width: 89.7436%;
+    }
+
+    .video-title h2 {
+        font-size: 3.2rem;
+    }
+
+    .video-title p {
+        font-size: 1.8rem;
+        padding: 0;
+    }
+
+    .about figure {
+        aspect-ratio: 1; /* 1|1 */
+    }
+
+    .about figure img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .work-list {
+        flex-direction: column;
+        gap: 2.1rem;
+    }
+
+    .work-list li {
+        width: 100%;
+    }
+
+    .form-wrap {
+        width: 100%;
+    }
+
+    .form-wrap button {
+        width: 8rem;
+        flex-shrink: 0;
+    }
+
+    .form-wrap button b {
+        display: none;
+    }
+
+    .form-wrap button::before {
+        content: "\F0D9"; /* 래믹스아이콘 가상으로 넣기 */
+        font-family: remixicon; /* 폰트정의 꼭 넣기 */
+    }
+
+    .map-wrap {
+        aspect-ratio: 1/1.3538;
+    }
+
+    #footer .inner {
+        flex-direction: column;
+        gap: 2.8rem;
+    }
 }

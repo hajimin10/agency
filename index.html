@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Agency</title>
+
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
         <!-- remixicon CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -32,6 +33,12 @@
                         <li><a href="#">contact</a></li>
                     </ul>
 
+                    <!-- 새로운 아이콘 넣기 -->
+                    <button type="button" class="btn-menu">
+                        <i class="ri-menu-3-line"></i>
+                        <!-- 로그인 아이콘 바로 넣기 -->
+                        <i class="hidden">메뉴</i>
+                    </button>
                     <button type="button" class="btn-login">
                         <i class="ri-login-box-line"></i>
                         <!-- 로그인 아이콘 바로 넣기 -->
@@ -186,7 +193,7 @@
                     <div class="form-wrap">
                         <input type="text" placeholder="Enter your e-mail" />
                         <!-- 창 내용이 폼 요소에 보임 -->
-                        <button type="submit">request work</button>
+                        <button type="submit"><b>request work</b></button>
                         <!-- 창에 검색할 때 submit -->
                     </div>
                 </div>
@@ -237,8 +244,7 @@
         <hr />
         <!-- //e:footer -->
 
-        <script>
-            AOS.init();
-        </script>
+        <!-- script:src -->
+        <script src="./js/script.js"></script>
     </body>
 </html>
